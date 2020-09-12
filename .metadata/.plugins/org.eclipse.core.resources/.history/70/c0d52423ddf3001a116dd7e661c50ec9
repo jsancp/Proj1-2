@@ -1,0 +1,97 @@
+
+import java.util.Stack;
+
+public class Arithmetic {
+	
+private String exp; 
+
+
+	public Arithmetic(String exp) {
+		
+		this.exp = exp;
+		
+	}
+	
+	//String [] result = new String [str.length()];
+	
+	public boolean isBalanced(String exp) {
+		
+		 boolean isBalanced = false;
+		 
+		Stack<Character> st = new Stack<Character>();
+		
+		for (int i = 0; i < exp.length(); i++) {
+			
+			char c = exp.charAt(i);
+				
+			if(c == '(') 
+				st.push(c);
+			
+			else if(c == ')') {
+				if(st.isEmpty()) {
+					st.pop();
+					isBalanced = true; }
+					else {
+						isBalanced = false;
+					}
+				}
+			}
+		return isBalanced;
+	}
+
+	public void postFixExpression() {
+		String answer = new String(" ");
+		Stack <Character> postFix = new Stack <Character>();
+		
+		for (int i = 0; i < exp.length(); i++) {
+			char c = exp.charAt(i);
+			
+			if(Character.isLetterOrDigit(c))
+				answer += c;
+			else if(c == '(')
+				postFix.push(c);
+			
+			else if (c == ')') {
+				while(!postFix.isEmpty())
+					answer += postFix.pop();
+				
+				if(!postFix.isEmpty() && postFix.peek() != '(')
+					break;
+				else
+					postFix.pop();	
+			}
+			else {
+				while(!postFix.isEmpty() && Opera(c) <= Opera(postFix.peek())) {
+					if(postFix.peek() == '(')
+						answer += postFix.pop();
+				}
+				postFix.push(c);	
+			}
+		}
+		while(!postFix.isEmpty()) {
+			if(postFix.peek() == '(')
+				answer += postFix.pop();
+		}
+		getPostFix = answer;
+	}
+	
+	static int Opera(char ch) {
+		
+		switch(ch) {
+		case '+':
+		case '-':
+			return 1;
+		case '*':
+		case '/':
+			return 2;
+		case '%':
+			return 3;
+		}
+		return -1;
+			
+	}
+	
+	
+	}
+
+

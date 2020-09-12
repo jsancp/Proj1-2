@@ -1,0 +1,25 @@
+Program output on 2020-04-05 at 12:17:58.324890900
+Initial side facing up is tails.
+Toss 1: tails
+Toss 2: tails
+Toss 3: tails
+Toss 4: heads
+Toss 5: tails
+Toss 6: heads
+Toss 7: heads
+Toss 8: tails
+Toss 9: tails
+Toss 10: heads
+Toss 11: heads
+Toss 12: heads
+Toss 13: heads
+Toss 14: tails
+Toss 15: heads
+Toss 16: tails
+Toss 17: heads
+Toss 18: heads
+Toss 19: tails
+Toss 20: tails
+
+Number of times toss resulted in heads: 10
+Number of times toss resulted in tails: 10

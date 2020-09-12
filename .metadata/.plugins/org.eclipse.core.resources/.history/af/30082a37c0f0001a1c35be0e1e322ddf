@@ -1,0 +1,35 @@
+
+public class Driver {
+	public static void main(String[] arg) {
+		
+		String expression[] = {"5 + ) * ( 2 ",
+						" 2 + ( - 3 * 5 ) ",
+						" ( ( 2 + 3 ) * 5 ) * 8 ",
+						" 5 * 10 + (15 - 20 ) ) - 25 ",
+						" 5 + ( 5 * 10 + ( 15 - 20 ) - 25 ) * 9 " };
+		
+		
+		for (int i = 0; i < expression.length; i++) {
+			
+			char c = expression.charAt(i);
+			if(expression.charAt(i)= "(") {
+				
+			}
+			
+			Arithmetic e = new Arithmetic(expression[i]);
+			
+			if(e.isBalance()) {
+				System.out.println("Expression " + expression[i] + " is balanced\n");
+				e.postfixExpression();
+				System.out.println("The post fixed expression is " + e.getPostfix());
+				e.evalutePFE();
+			}
+			else 
+				System.out.println("Expression is not balanced\n");
+			
+			
+		}
+		
+		
+	}
+}

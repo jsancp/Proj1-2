@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;Mole.java&apos; to &apos;Dolphin.java&apos;&#x0D;&#x0A;- Original project: &apos;Project4&apos;&#x0D;&#x0A;- Original element: &apos;Mole.java&apos;&#x0D;&#x0A;- Renamed element: &apos;Dolphin.java&apos;" description="Rename compilation unit &apos;Mole.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{Mole.java" name="Dolphin.java" references="false" stamp="1595035677980" version="1.0"/>
+</session>
